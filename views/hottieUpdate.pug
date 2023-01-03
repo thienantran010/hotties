@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  div.container
+    h1= title
+    - var desc = undefined === hottie ? '' : hottie.desc
+    form(method='POST', action='', enctype="multipart/form-data")
+      div.form-floating.m-2
+        input.form-control(type='text', id='firstName', placeholder='First Name', name='firstName', value=(undefined === hottie ? '' : hottie.firstName))
+        label.form-label(for='firstName') First Name: 
+      div.form-floating.m-2
+        input.form-control(type='text', placeholder='Last Name', id='lastName', name='lastName', value=(undefined === hottie ? '' : hottie.lastName))
+        label.form-label(for='lastName') Last Name: 
+      div.form-floating.m-2
+        input.form-control(type='text', name='from', id='from', placeholder='From', value=(undefined === hottie ? '' : hottie.from))
+        label.form-label(for='from') From what book/movie/tv show/ etc.?
+      div.m-2
+        textarea.form-control(name='desc', rows='5', placeholder='Description', id='desc')= desc
+      input.form-control.m-2(type='file', id='img', name='img')
+      button.btn.btn-primary.m-2(type='submit') Submit

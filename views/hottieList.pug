@@ -1,0 +1,7 @@
+extends layout 
+
+block content 
+    ul
+        each hottie in hotties 
+            li
+                a(href= hottie.url) #{hottie.lastName}, #{hottie.firstName}

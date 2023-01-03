@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  div.container
+    div.row.row-cols-5.g-3
+      each hottie in hotties
+        - var src = "data:" + hottie.img.contentType + ";base64," + hottie.img.data.toString('base64')
+        div.col
+          div.card
+            img.card-img-top(src=src)
+            div.card-body
+              span.card-title
+                a.nameContainer(href= hottie.url) #{hottie.fullName}

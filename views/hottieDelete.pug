@@ -1,0 +1,12 @@
+extends layout 
+
+block content 
+    - var src = "data:" + hottie.img.contentType + ";base64," + hottie.img.data.toString('base64')
+    img(src=src)
+    h1 #{hottie.fullName}
+    h2 From: #{hottie.from}
+    p #{hottie.desc}
+
+    form(method='POST', action='')
+        span Are you sure you want to delete this hottie?
+        button(type='submit') Delete
