@@ -2,10 +2,10 @@ Goal: Practice server-side programming with JavaScript.
 
 Tools Used: Express.js, multer.js, Pug/Jade, Bootstrap, MongoDB
 
-Result: Website where you can post "hotties."
-- Home page displaying cards of hotties and their names
-- List page displaying a list of hotties sorted in alphabetical order by last name
-- Detail, update, create, and delete pages for hotties (basic CRUD)
+Result: Online yearbook
+- Home page displaying cards of people and their names
+- List page displaying a list of people sorted in alphabetical order by last name
+- Detail, update, create, and delete pages for people (basic CRUD)
 
 Suggestions to improve website:
 - Add validation for form submissions
